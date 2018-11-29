@@ -18,8 +18,10 @@ def check(x):
         else:
             print("invalid list")
             return False
+    if stack.isEmpty() == False:
+        return False
     return True
 
 
-hahah = "[(<>)]()(()())"
+hahah = "(()"
 print(check(hahah))
