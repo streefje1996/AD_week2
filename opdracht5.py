@@ -23,8 +23,8 @@ def qsort_worstcase(a):
         else:
            left.append(element)
 
-    left = qsort(left)
-    right = qsort(right)
+    left = qsort_worstcase(left)
+    right = qsort_worstcase(right)
 
     left.append(pivot)
     for element in right:

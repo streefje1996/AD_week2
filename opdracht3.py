@@ -10,11 +10,14 @@ def check(x):
         if element in brackets.keys():
             stack.push(element)
         elif element in brackets.values():
-            if element == brackets[stack.peek()]:
-                stack.pop()
+            if stack.peek() != None:
+                if element == brackets[stack.peek()]:
+                    stack.pop()
+                else:
+                    print("found " + element + " in string, and " + stack.peek() + " on the stack")
+                    return False       
             else:
-                print("found " + element + " in string, and " + stack.peek() + " on the stack")
-                return False           
+                return False
         else:
             print("invalid list")
             return False

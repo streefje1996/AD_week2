@@ -4,7 +4,9 @@ class mystack(list):
         self.append(a)
 
     def peek(self):
-        return self[-1]
+        if self.isEmpty() == False:
+            return self[-1]
+        return None
 
     def isEmpty(self):
         if len(self) == 0:
